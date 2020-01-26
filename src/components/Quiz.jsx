@@ -18,7 +18,16 @@ function Quiz({
   let content;
 
   if (isLoading) {
-    content = 'Loading';
+    content = (
+      <>
+        <div className="quiz__header">Loading questions...</div>
+        <div className="lds-facebook">
+          <div />
+          <div />
+          <div />
+        </div>
+      </>
+    );
   } else {
     const { question, answers } = questions[currentQuestion];
     content = (
@@ -48,7 +57,7 @@ function Quiz({
       </div>
     );
   }
-  return <div>{content}</div>;
+  return <div className="quiz">{content}</div>;
 }
 
 Quiz.propTypes = {

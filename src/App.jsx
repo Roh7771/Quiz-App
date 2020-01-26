@@ -2,7 +2,7 @@ import React from 'react';
 import './style/main.sass';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Greatings from './components/Greatings';
+import Greatings from './components/Greating';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 
@@ -15,7 +15,7 @@ function App({ started, finished }) {
   } else {
     content = <Quiz />;
   }
-  return <div className="container">{content}</div>;
+  return <>{content}</>;
 }
 
 App.propTypes = {

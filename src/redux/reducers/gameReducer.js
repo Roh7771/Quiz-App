@@ -2,8 +2,8 @@
 import { STARTQUIZ, HIDELOADING, NEXTQUESTION } from '../actions/actionsTypes';
 
 const initialState = {
-  started: false,
-  isLoading: false,
+  started: true,
+  isLoading: true,
   finished: false,
 };
 
